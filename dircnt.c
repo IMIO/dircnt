@@ -225,14 +225,14 @@ main(int argc, char* argv[])
    * printed */
   if (0 < counts.files || 0 < counts.dirs) {
 #ifdef FEATURE_SIZE
-    printf("%s contains %lu files (%lu B) and %lu directories (%lu B)\n",
+    printf("%s\t%lu\t%lu\t%lu\t%lu\t\n",
            dir,
            counts.files,
            counts.size_files,
            counts.dirs,
            counts.size_dirs);
 #else
-    printf("%s contains %lu files and %lu directories\n", dir, counts.files, counts.dirs);
+    printf("%s\t%lu\t%lu\t\n", dir, counts.files, counts.dirs);
 #endif
   }
 
