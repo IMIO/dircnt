@@ -15,3 +15,7 @@ build/base: prepare
 
 build/debug: prepare
 	cc -Wall -DDEBUG -DFEATURE_SIZE -DPREFER_STAT -pedantic -o build/dircnt dircnt.c
+
+install:
+	mkdir -p $(DESTDIR)/usr/bin/
+	cp -r build/dircnt $(DESTDIR)/usr/bin/
